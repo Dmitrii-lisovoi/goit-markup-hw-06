@@ -354,7 +354,7 @@
             </div>
         </section> 
     </main>
-    <!-- футер -->
+    <!--------------------------------------------- футер ------------------------------------->
     <footer class="footer">
         <div class="container footer-base">
             <div>
@@ -375,7 +375,7 @@
             </address>
             </div>
             <div class="subsribe">
-                <h2 class="conect-title">присоединяйтесь</h2>
+                <h2 class="submit-title footer-title">присоединяйтесь</h2>
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
                         <a class="footer-social-link" target="_blank" href="https://www.instagram.com/?hl=ru">
@@ -412,8 +412,26 @@
                         </li>
                 </ul>
             </div>
+            <div class="submit">
+                <h2 class="conect-title footer-title">Подпишитесь на рассылку</h2>
+                <form action="#" class="submit-email" >
+                    <input type="email"
+                    name="online-email" 
+                    class="email-input" 
+                    placeholder="E-mail"
+                    required
+                    />
+                    <button type="submit" class="submit-btn">
+                        Подписаться
+                        <svg class="submit-icon" width="20" height="20">
+                            <use href="./images/icons.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
+    <!--------------------------------------- модальное окно -------------------------------->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close" data-modal-close>
@@ -421,6 +439,32 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="#" class="modal-form">
+                <label class="modal-label">
+                    Имя
+                    <input type="text" name="user-name" required class="modal-input">
+                </label>
+                <label class="modal-label">
+                    Телефон
+                    <input type="tel" name="user-tel" required class="modal-input">
+                </label>
+                <label class="modal-label">
+                    Почта
+                    <input type="email" name="user-email" required class="modal-input">
+                </label>
+                <label class="modal-label">
+                    Комментарий
+                    <textarea name="" id="" cols="30" rows="10" class="modal-input textarea"></textarea>
+                </label>
+                <label class="modal-label">
+                    <input type="checkbox" class="modal-input">
+                    Соглашаюсь с рассылкой и принимаю Условия договора
+                </label>
+                <button type="submit" class="submit-btn modal-btn">
+                    Отправить
+                </button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
