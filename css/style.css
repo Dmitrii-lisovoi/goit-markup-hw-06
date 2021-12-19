@@ -787,12 +787,30 @@ ul {
   margin-bottom: 12px;
 }
 
+.close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon:hover {
+  fill: #2196f3;
+}
+
+.modal-form {
+  width: 100%;
+  height: 342px;
+}
+
 .modal-label {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  display: block;
+  text-align: start;
+
   color: #757575;
+
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .modal-input {
@@ -800,16 +818,110 @@ ul {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 10px;
+  margin-top: 4px;
+  padding-left: 42px;
   padding-right: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textarea {
+.modal-input:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+  border-color: var(--accent-color);
+}
+
+.block-icon-input {
+  position: relative;
+}
+
+.icon-form {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  fill: var(-);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .icon-form {
+  fill: var(--accent-color);
+}
+
+.modal-label.form-label {
+  margin-bottom: 4px;
+}
+
+.modal-comment {
+  resize: none;
+  width: 100%;
   height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  transition: border-color 250ms var(--accent-color);
+}
+.modal-comment:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+  border-color: var(--accent-color);
+}
+.modal-comment::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-contract {
+  display: block;
+  margin-left: 15px;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-contract {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.icon-contract {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+  margin-bottom: -2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-contract:checked + .icon-contract {
+  background-color: var(--accent-color);
+  border-color: #2196f3;
+}
+
+.link-contract {
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
 }
 
 .modal-btn {
-  margin-top: 30px;
   margin: auto;
 }
 
